@@ -163,3 +163,135 @@ a.secondary {
     filter: invert();
   }
 }
+
+.description {
+  padding: 15px;
+  width: 30vw;
+  height: 50vh;
+  border-width: 2px;
+  /* Add border width */
+  border-style: solid;
+  /* Add border style */
+  border-color: #1a1a1a1e;
+  /* Set border color */
+  background: #fffffffc;
+}
+
+@media (max-width: 768px) {
+  .description {
+    width: 70vw;
+    /* Increase width for tablet */
+    height: 40vh;
+    /* Adjust height for tablet */
+    padding: 10px;
+    /* Reduce padding */
+  }
+}
+
+/* Media Query for Mobile or Small Screens */
+@media (max-width: 480px) {
+  .description {
+    display: none
+    ;
+  }
+  .cont{
+    display: none;
+  }
+  .ltst{
+    display: none;
+  }
+}
+
+/* Keyframes for FadeIn Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* Start with 0 opacity */
+    transform: translateY(20px);
+    /* Start from a lower position */
+  }
+
+  100% {
+    opacity: 1;
+    /* Fade to fully visible */
+    transform: translateY(0);
+    /* End at the normal position */
+  }
+}
+
+.badgeBasic {
+  background-color: rgb(134, 133, 133);
+  color: white;
+  padding: 2px 4px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.badgePremium {
+  background-color: rgb(215, 223, 1);
+  color: white;
+  padding: 2px 4px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.ltst {
+  text-align: left;
+}
+
+.cont {
+  padding-top: 20px;
+}
+
+.description {
+  font-size: 1.1rem;
+}
+
+.badgeBasic {
+  background-color: #007bff;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  flex: 1 0 45%; /* Cards take up 45% width */
+  margin: 10px;
+  height: 300px; /* Fixed height for uniformity */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  object-fit: cover;
+  height: 100%; /* Ensures image takes full height of its container */
+  width: 100%;
+}
+
+.card-content {
+  padding: 20px;
+  flex-grow: 1; /* Makes sure content takes available space */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-footer {
+  margin-top: auto; /* Pushes "Continue Reading" button to the bottom */
+}
+
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
